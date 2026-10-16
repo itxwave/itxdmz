@@ -1,0 +1,147 @@
+<!-- views/pricing.html -->
+<section class="hero">
+    <canvas id="field" aria-hidden="true"></canvas>
+    <div class="wrap hero-grid">
+        <div>
+            <div class="kicker">IT Company in Haiti</div>
+            <h1 id="hero-title">Pricing</h1>
+            <p class="lede">iTxWave overcome IT challenges.</p>
+
+            <div class="header">
+                <h2>iTxWave Website & <span>Mailbox</span></h2>
+                <p>Choose the perfect digital transformation infrastructure for your business</p>
+            </div>  
+            <!-- Interactive Toggle Menu -->
+            <div class="toggle-container">
+                <span class="toggle-label active" id="monthly-label">Monthly Billing</span>
+                <label class="switch">
+                    <input type="checkbox" id="billing-toggle">
+                    <span class="slider"></span>
+                </label>
+                <span class="toggle-label" id="yearly-label">Yearly Billing (Save up to $48)</span>
+            </div>  
+            <div class="hero-actions">
+                <a class="btn btn-primary" href="#contact">Contact us</a>
+                <a class="btn btn-line" href="#services">Discover our services</a>
+            </div>                                
+        </div>
+        <aside class="hero-card"> 
+            <!-- Optimized Cards Grid Layout -->
+            <div class="pricing-grid">
+                
+                <!-- Single Page Plan -->
+                <div class="card">
+                    <div class="plan-name">Single Page</div>
+                    <div class="mailbox-count">1 Mailbox included</div>
+                    <div class="price-container">
+                        <div class="setup-fee">+$180.00 one-time setup</div>
+                        <strong>
+                        <div class="price">$<span class="amount" data-monthly="15.50" data-yearly="12.50">15.50</span><span class="duration">/mo</span></div>
+
+                        </strong>
+                        <div class="savings-badge" data-savings="$36.00">Save $36.00 / yr</div>
+                    </div>
+                    <ul class="feature-list">
+                        <li><span class="icon check">✓</span> Index page</li>
+                        <li class="disabled"><span class="icon cross">✕</span> DNS Protection</li>
+                        <li><span class="icon check">✓</span> Hosting</li>
+                        <li><span class="icon check">✓</span> Domain name</li>
+                        <li><span class="icon check">✓</span> Mailbox support</li>
+                        <li><span class="icon check">✓</span> iTxmail panel</li>
+                        <li class="disabled"><span class="icon cross">✕</span> Admin support</li>
+                        <li class="disabled"><span class="icon cross">✕</span> Additional web page</li>
+                    </ul>
+                    <a href="#contact" class="btn">Get Started</a>
+                </div>
+
+                <!-- Standard Plan (Highlighted UI Alternative) -->
+                <div class="card popular">
+                    <div class="badge">Most Popular</div>
+                    <div class="plan-name">Standard</div>
+                    <div class="mailbox-count">3 Mailboxes included</div>
+                    <div class="price-container">
+                        <div class="setup-fee">+$300.00 one-time setup</div>
+                        <div class="price">$<span class="amount" data-monthly="20.00" data-yearly="16.50">20.00</span><span class="duration">/mo</span></div>
+                        <div class="savings-badge" data-savings="$42.00">Save $42.00 / yr</div>
+                    </div>
+                    <ul class="feature-list">
+                        <li><span class="icon check">✓</span> Index page</li>
+                        <li><span class="icon check">✓</span> DNS Protection</li>
+                        <li><span class="icon check">✓</span> Hosting</li>
+                        <li><span class="icon check">✓</span> Domain name</li>
+                        <li><span class="icon check">✓</span> Mailbox support</li>
+                        <li><span class="icon check">✓</span> iTxmail panel</li>
+                        <li class="disabled"><span class="icon cross">✕</span> Admin support</li>
+                        <li><span class="icon check">✓</span> Additional web page</li>
+                    </ul>
+                </div>
+
+                <!-- Dynamic Plan -->
+                <div class="card">
+                    <div class="plan-name">Dynamic</div>
+                    <div class="mailbox-count">3 Mailboxes included</div>
+                    <div class="price-container">
+                        <div class="setup-fee">+$300.00 one-time setup</div>
+                        <div class="price">$<span class="amount" data-monthly="41.50" data-yearly="37.50">41.50</span><span class="duration">/mo</span></div>
+                        <div class="savings-badge" data-savings="$48.00">Save $48.00 / yr</div>
+                    </div>
+                    <ul class="feature-list">
+                        <li><span class="icon check">✓</span> Index page</li>
+                        <li><span class="icon check">✓</span> DNS Protection</li>
+                        <li><span class="icon check">✓</span> Hosting</li>
+                        <li><span class="icon check">✓</span> Domain name</li>
+                        <li><span class="icon check">✓</span> Mailbox support</li>
+                        <li><span class="icon check">✓</span> iTxmail panel</li>
+                        <li><span class="icon check">✓</span> Admin support</li>
+                        <li><span class="icon check">✓</span> Additional web page</li>
+                    </ul>
+                </div>                
+            </div>
+        </aside>
+        <!--
+        <aside class="hero-card">
+            <img src="static/itxwave/images/itxwave-emblem.png" alt="" style="opacity: 0.9;">
+            <h3>Reliable partner</h3>
+            <p>We efficiently support you in the success of your acquisition, networking, training, and maintenance projects.</p>
+            <div class="stats">
+                <div><b>+<span id="count-years">5</span></b><span> years of service</span></div>
+                <div><b>100 %</b><span> customer-oriented</span></div>
+            </div>
+        </aside>-->
+    </div>
+    <!--
+    <script>
+        const toggle = document.getElementById('billing-toggle');
+        const amounts = document.querySelectorAll('.amount');
+        const durations = document.querySelectorAll('.duration');
+        const badges = document.querySelectorAll('.savings-badge');
+        const monthlyLabel = document.getElementById('monthly-label');
+        const yearlyLabel = document.getElementById('yearly-label');
+        toggle.addEventListener('change', function() {
+            const isYearly = this.checked;
+            // Toggle label text state highlights
+            if (isYearly) {
+                monthlyLabel.classList.remove('active');
+                yearlyLabel.classList.add('active');
+            } else {
+                monthlyLabel.classList.add('active');
+                yearlyLabel.classList.remove('active');
+            }
+            // Update displayed price elements dynamically
+            amounts.forEach((amount, index) => {
+                if (isYearly) {
+                    amount.textContent = amount.getAttribute('data-yearly');
+                    durations[index].textContent = '/mo*';
+                    badges[index].classList.add('show');
+                } else {
+                    amount.textContent = amount.getAttribute('data-monthly');
+                    durations[index].textContent = '/mo';
+                    badges[index].classList.remove('show');
+                }
+            });
+        });
+    </script>
+    -->
+</section>
+
+
