@@ -47,10 +47,11 @@
                     <ul>
                         <!--<li><a href="index.html">Home</a></li>-->
                         <li><a href="#top" onclick="loadPage('home')">Home</a></li>
-                        <li><a href="#top" onclick="loadPage('aboutus')">About</a></li>
+                        <li><a href="#top" onclick="loadPage('about')">About</a></li>
                         <li><a href="#services">Services</a></li>
                         <li><a href="#top" onclick="loadPage('pricing')">Pricing</a></li>
                         <!--<li><a href="#about">About</a></li>-->
+                        <li><a href="https://webmail.itxwave.com">iTxMail</a></li>
                         <li><a href="#launches">Launches</a></li>
                         <li><a href="#partners">Partners</a></li>
                         <li><a href="#contact">Contact</a></li>
@@ -213,9 +214,13 @@
 
         // Load html page into layout
         async function loadPage(pageName) {   
+            // Add a unique timestamp to the URL to bypass the cache
+            const uniqueUrl = `./pages/${pageName}.html?v=${new Date().getTime()}`;
+
             try {
                 // Look directly inside the "pages" folder for the html file
-                const response = await fetch(`./pages/${pageName}.html`);
+                //const response = await fetch(`./pages/${pageName}.html`);
+                const response = await fetch(uniqueUrl);
                 if (!response.ok) throw new Error('Page not found');
                 
                 const htmlContent = await response.text();
