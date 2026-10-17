@@ -8,6 +8,17 @@
     --success: #059669;
     --text-muted: #6B7280;
 }
+@media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+        --bg:#0C0C0E; --surface:#16161A; --fg:#F2F2F0; --muted:#A3A3AB; --line:#2A2A30;
+        --red:#FF2B36; --red-ink:#FF5560; --trace:rgba(242,242,240,.08); --pulse:#FF2B36; color-scheme:dark
+    }
+}
+:root[data-theme="dark"]{
+    --bg:#0C0C0E; --surface:#16161A; --fg:#F2F2F0; --muted:#A3A3AB; --line:#2A2A30;
+    --red:#FF2B36; --red-ink:#FF5560; --trace:rgba(242,242,240,.08); --pulse:#FF2B36; color-scheme:dark
+}
+
 /*
 * {
     box-sizing: border-box;
@@ -54,7 +65,7 @@ body {
     justify-content: center;
     gap: 15px;
     margin-bottom: 40px;
-    background: #fff;
+    background: var(--bg);
     padding: 8px 16px;
     border-radius: 30px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
@@ -123,7 +134,7 @@ input:checked + .slider:before {
 }
 
 .card {
-    background: #fff;
+    background: var(--bg);
     border: 1px solid var(--border);
     border-radius: 16px;
     padding: 30px;
