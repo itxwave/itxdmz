@@ -224,7 +224,7 @@ input:checked + .slider:before {
     font-size: 0.95rem;
 }
 
-.feature-list li.disabled {
+.feature-list > li span.disabled {
     color: #9CA3AF;
     text-decoration: line-through;
 }
